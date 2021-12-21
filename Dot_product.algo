@@ -1,0 +1,65 @@
+PROCEDURE dot_product(var  x:BOOLEAN, arr1,arr2 : ARRAY_OF INTEGER )
+VAR
+
+ i : INTEGER
+ ps : INTEGER 
+
+
+BEGIN
+    FOR i FROM 0 TO arr1.length   DO
+
+
+    ps := ps + arr1[i] * arr2[i]
+
+    IF (ps  == 0) THEN
+        x:true
+        else false
+
+    END_IF
+    END_FOR
+END
+
+
+ALGORITHM Checkpoint procedure 2 
+VAR
+   v1 ,v2 :ARRAY_OF INTEGER 
+   isorth:BOOLEAN
+BEGIN
+
+  dotproduct(isorth,v1,v2)
+  
+IF (isorth == true) THEN
+     write("orthogonal ")
+
+     else write ("not orthogonale")
+END_IF
+
+
+    
+END
+
+FUNCTION gmc(arr1,arr2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+ i : INTEGER
+ var ps = 0
+BEGIN
+FOR i FROM 0 TO arr1.length DO
+ ps = ps + arr1[i]*arr2[i]
+   
+    
+END_FOR
+RETURN ps
+END
+
+
+ALGORITHM Checkpoint 4 
+VAR
+   ps = INTEGER
+   v1,v2 : ARRAY_OF INTEGER
+BEGIN
+ ps := gmc(v1,v2)
+ IF (ps == 0) THEN
+     write("orthogonal ")
+     else write ("not orthogonale")
+ END_IF
+END
